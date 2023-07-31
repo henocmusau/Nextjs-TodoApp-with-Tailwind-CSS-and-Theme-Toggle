@@ -75,7 +75,7 @@ export default function Home() {
       className='bg-lightImage dark:bg-darkImage flex w-full bg-cover bg-no-repeat bg-top flex-col items-center justify-between'
     >
       <section
-        className='min-h-[300px] mx-2 md:mx-0 w-full md:w-[500px] pt-20 relative'
+        className='min-h-[300px] px-2 md:px-0 w-full md:w-[500px] pt-20 relative'
       >
         <div className='flex justify-between items-center mx-2 md:mx-0 text-white mb-10'>
           <h1 className='text-4xl font-semibold uppercase tracking-[0.3em] '>Todo</h1>
@@ -90,21 +90,24 @@ export default function Home() {
             className='w-full rounded p-4 text-lg dark:bg-bgDarkSecondary dark:text-slate-200'
           />
         </form>
-        <div
-          className="w-full md:w-[500px] mx-2 md:mx-0 absolute mt-5 bg-slate-100 dark:bg-bgDarkSecondary rounded-lg divide-y dark:divide-gray-700 shadow-lg"
-        >
+        <div className='w-full relative'>
+          <section
+            className="md:w-[500px] md:mx-0 absolute left-0 top-0 mt-5 bg-slate-100 dark:bg-bgDarkSecondary rounded-lg divide-y dark:divide-gray-700 shadow-lg"
+          >
 
-          <ListTodos
-            todos={filteredTodos}
-            changeStateTodo={changeStateTodo}
-            handleRemoveTodo={removeTodo}
-            filterTodos={filteredTodos}
-            changeFilter={changeFilter}
-            clearCompletedTodos={clearCompletedTodos}
-            filterCategory={filter}
-          />
+            <ListTodos
+              todos={filteredTodos}
+              changeStateTodo={changeStateTodo}
+              handleRemoveTodo={removeTodo}
+              filterTodos={filteredTodos}
+              changeFilter={changeFilter}
+              clearCompletedTodos={clearCompletedTodos}
+              filterCategory={filter}
+            />
 
+          </section>
         </div>
+
       </section>
     </main>
   )
