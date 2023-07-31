@@ -26,12 +26,12 @@ export default function ListTodos({ todos, changeStateTodo, handleRemoveTodo, ch
                 <Todo key={todo.id} {...todo} changeStateTodo={changeStateTodo} RemoveTodo={handleRemoveTodo} />
             ))}
 
-            {todos.length < 1 && <span className='px-4 py-2 w-full mx-2 box-border flex dark:text-slate-200 rounded-md'>No todo here. Create one !</span>}
-            <div className="flex justify-between px-6 text-sm py-4 text-slate-500">
+            {todos.length < 1 && <span className='px-4 py-2 w-full mx-auto box-border flex dark:text-slate-200 rounded-md'>No todo here. Create one !</span>}
+            <div className="flex justify-between px-4 text-sm py-4 text-slate-500 flex-wrap">
 
                 {/* Stats and filters */}
-                <span>{todos.length} items left</span>
-                <div className="flex gap-4">
+                <span className="md:basis-auto basis-1/2 order-1">{todos.length} items left</span>
+                <div className="flex justify-center gap-4 basis-full md:basis-auto mt-5 md:mt-0 order-2 md:order-1">
                     {filters.map(filter => (
                         <button onClick={() => changeFilter(filter.code)} key={filter.code} className={filter.code === filterCategory ? classActiveFilterButton : classFilterButton}>
                             {filter.name}
@@ -39,7 +39,7 @@ export default function ListTodos({ todos, changeStateTodo, handleRemoveTodo, ch
                     ))
                     }
                 </div>
-                <button onClick={() => clearCompletedTodos()} className="hover:text-slate-900 dark:hover:text-slate-200 hover:font-semibold duration-300 cursor-pointer">Clear Completed</button>
+                <button onClick={() => clearCompletedTodos()} className="md:basis-auto basis-1/2 order-1 text-right hover:text-slate-900 dark:hover:text-slate-200 hover:font-semibold duration-300 cursor-pointer">Clear Completed</button>
             </div>
         </>
     )

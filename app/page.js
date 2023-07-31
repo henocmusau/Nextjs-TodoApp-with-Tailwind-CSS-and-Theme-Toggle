@@ -90,9 +90,9 @@ export default function Home() {
             className='w-full rounded p-4 text-lg dark:bg-bgDarkSecondary dark:text-slate-200'
           />
         </form>
-        <div className='w-full relative'>
+        <div className='w-full justify-center relative mx-auto'>
           <section
-            className="md:w-[500px] md:mx-0 absolute left-0 top-0 mt-5 bg-slate-100 dark:bg-bgDarkSecondary rounded-lg divide-y dark:divide-gray-700 shadow-lg"
+            className="w-full md:mx-0 absolute left-0 top-0 mt-5 bg-slate-100 dark:bg-bgDarkSecondary rounded-lg divide-y dark:divide-gray-700 shadow-lg"
           >
 
             <ListTodos
